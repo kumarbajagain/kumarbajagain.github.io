@@ -704,10 +704,12 @@ a:hover { color: var(--primary-dark); }
 
 /* ===== VISITOR WIDGET ===== */
 .visitor-widget {
-    position: fixed;
-    bottom: 24px;
-    right: 24px;
-    z-index: 999;
+    position: fixed !important;
+    bottom: 24px !important;
+    right: 24px !important;
+    left: auto !important;
+    top: auto !important;
+    z-index: 9999;
     background: #0f172a;
     border: 1px solid rgba(255,255,255,0.12);
     border-radius: 14px;
@@ -717,7 +719,8 @@ a:hover { color: var(--primary-dark); }
     align-items: center;
     gap: 4px;
     box-shadow: 0 4px 24px rgba(0,0,0,0.35);
-    min-width: 90px;
+    width: 100px;
+    max-width: 100px;
 }
 .visitor-eye {
     width: 16px;
