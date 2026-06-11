@@ -640,9 +640,9 @@
             document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 50);
         });
 
-        fetch('https://api.countapi.xyz/hit/kumarbajagain.com.np/visits')
+        fetch('https://api.counterapi.dev/v1/kumarbajagain/visits/up')
             .then(r => r.json())
-            .then(d => { document.getElementById('visitor-num').textContent = d.value.toLocaleString(); })
+            .then(d => { document.getElementById('visitor-num').textContent = d.count.toLocaleString(); })
             .catch(() => { document.getElementById('visitor-num').textContent = '—'; });
 
         const sections = document.querySelectorAll('section[id]');
