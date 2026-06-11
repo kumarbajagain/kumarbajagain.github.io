@@ -615,11 +615,9 @@
 
     <!-- Visitor Counter -->
     <div class="visitor-widget">
-        <div class="visitor-label">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
-            Visitors
-        </div>
-        <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fkumarbajagain.com.np&count_bg=%230e7490&title_bg=%230e7490&title=&edge_flat=true" alt="visitor count" class="visitor-count-img">
+        <svg class="visitor-eye" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+        <div id="visitor-num" class="visitor-num">...</div>
+        <div class="visitor-label">visitors</div>
     </div>
 
     <script>
@@ -641,6 +639,11 @@
         window.addEventListener('scroll', () => {
             document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 50);
         });
+
+        fetch('https://api.countapi.xyz/hit/kumarbajagain.com.np/visits')
+            .then(r => r.json())
+            .then(d => { document.getElementById('visitor-num').textContent = d.value.toLocaleString(); })
+            .catch(() => { document.getElementById('visitor-num').textContent = '—'; });
 
         const sections = document.querySelectorAll('section[id]');
         window.addEventListener('scroll', () => {
