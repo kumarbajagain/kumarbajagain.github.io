@@ -702,6 +702,46 @@ a:hover { color: var(--primary-dark); }
     color: rgba(255,255,255,0.35);
 }
 
+/* ===== CERTIFICATIONS ===== */
+.cert-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    margin-top: 40px;
+}
+.cert-item {
+    display: flex;
+    gap: 28px;
+    padding: 24px 0;
+    border-bottom: 1px solid var(--border);
+}
+.cert-item:last-child { border-bottom: none; }
+.cert-year {
+    min-width: 120px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--primary);
+    padding-top: 3px;
+    flex-shrink: 0;
+}
+.cert-body h3 { font-size: 0.98rem; font-weight: 700; color: var(--text-dark); margin-bottom: 4px; }
+.cert-org { font-size: 0.83rem; color: var(--text-light); margin-bottom: 6px; }
+.cert-body p { font-size: 0.88rem; color: var(--text-mid); }
+
+.award-block {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    margin-top: 40px;
+    background: linear-gradient(135deg, #fef9c3, #fef3c7);
+    border: 1px solid #fde68a;
+    border-radius: var(--radius-lg);
+    padding: 28px;
+}
+.award-icon { font-size: 2.2rem; flex-shrink: 0; }
+.award-block h3 { font-size: 1rem; font-weight: 700; color: #92400e; margin-bottom: 8px; }
+.award-block p { font-size: 0.9rem; color: #78350f; }
+
 /* ===== RESPONSIVE ===== */
 @media (max-width: 900px) {
     .nav-toggle { display: flex; }
