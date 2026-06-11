@@ -217,7 +217,7 @@ a:hover { color: var(--primary-dark); }
     content: '';
     position: absolute;
     inset: 0;
-    background: url('/img/intro.jpg') center/cover no-repeat;
+    background: url('/intro.jpg') center/cover no-repeat;
     opacity: 0.12;
 }
 
